@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var WHATSAPP_NUMBER = '918805348821';
+  var WHATSAPP_NUMBER = '918983229224';
   var formCard = document.getElementById('reservation-form-card');
   var form = document.getElementById('reservation-form');
   var submitBtn = document.getElementById('reservation-submit');

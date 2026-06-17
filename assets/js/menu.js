@@ -2,7 +2,7 @@
   'use strict';
 
   var WHATSAPP_COMBO =
-    'https://wa.me/918805348821?text=Hi%20Kaps%20Caf%C3%A9!%20I%20want%20to%20know%20about%20combo%20meals.';
+    'https://wa.me/918983229224?text=Hi%20Kaps%20Caf%C3%A9!%20I%20want%20to%20know%20about%20combo%20meals.';
 
   var MENU_TABS = [
     {
@@ -426,15 +426,7 @@
     { tabId: 'pizza', name: 'Paneer Tikka Pizza' },
     { tabId: 'momos', name: 'Veg Momos' },
     { tabId: 'momos', name: 'Chicken Momos' },
-    { tabId: 'snacks', name: 'Peri Peri Fries' },
-    { tabId: 'snacks', name: 'Tandoori Wings' },
-    { tabId: 'sandwiches', name: 'Club Sandwich' },
-    { tabId: 'drinks', name: 'Cold Coffee' },
-    { tabId: 'drinks', name: 'Chocolate' },
-    {
-      tabId: 'combos',
-      name: '1 Pizza + 2 Burger + Nuggets 3 Pcs + Momos 4 Pcs + 2 Cold Drinks'
-    }
+    { tabId: 'snacks', name: 'Peri Peri Fries' }
   ];
 
   var activeTabId = 'snacks';
