@@ -1,0 +1,619 @@
+/* ══════════════════════════════════════
+   Kaps Café — Mobile polish
+   Tablet: max-width 768px
+   Phone:  max-width 430px
+   Desktop styles are unchanged.
+   ══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 0 1.25rem;
+    --section-padding: 3.5rem 0;
+    --duration-fast: 140ms;
+    --duration-mid: 280ms;
+  }
+
+  html {
+    scroll-padding-top: 60px;
+  }
+
+  /* ── Touch feedback ── */
+  .hero__cta:active,
+  .nav__reserve:active,
+  .nav__hamburger:active,
+  .nav__close:active,
+  .nav__whatsapp:active,
+  .nav__overlay-link:active,
+  .menu__tab:active,
+  .menu__submit:active,
+  .reservation__submit:active,
+  .find-us__btn:active,
+  .about__instagram:active,
+  .instagram__follow:active,
+  .footer__social-link:active,
+  .footer__nav-link:active,
+  .back-to-top:active,
+  .menu__whatsapp-btn:active,
+  .menu__btn--primary:active,
+  .menu__btn--ghost:active,
+  .menu__view-full-btn:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+
+  /* ── Reduced reveal distances ── */
+  .highlight-card {
+    transform: translateY(20px);
+    transition-duration: 0.45s;
+  }
+
+  .menu__body {
+    transform: translateY(16px);
+    transition-duration: 0.45s;
+  }
+
+  .about__media {
+    transform: translateX(-20px);
+    transition-duration: 0.5s;
+  }
+
+  .about__content {
+    transform: translateX(20px);
+    transition-duration: 0.5s;
+  }
+
+  .about__stat {
+    transform: translateY(10px);
+    transition-duration: 0.4s;
+  }
+
+  .instagram__header,
+  .instagram__footer,
+  .find-us__header {
+    transform: translateY(12px);
+    transition-duration: 0.45s;
+  }
+
+  .find-us__map-col {
+    transform: translateX(-20px);
+    transition-duration: 0.5s;
+  }
+
+  .find-us__details {
+    transform: translateX(20px);
+    transition-duration: 0.5s;
+  }
+
+  .find-us__block,
+  .instagram__cell {
+    transform: translateY(10px);
+    transition-duration: 0.35s;
+  }
+
+  .hero--loaded .hero__eyebrow,
+  .hero--loaded .hero__subtitle,
+  .hero--loaded .hero__actions {
+    animation-duration: 0.5s;
+  }
+
+  .hero--loaded .hero__title-line .hero__title-text {
+    animation-duration: 0.6s;
+  }
+
+  /* ── Minimum readable text (14px) ── */
+  .nav__reserve,
+  .marquee__text,
+  .menu__legend-item,
+  .menu-note,
+  .menu__combo-footer,
+  .menu-item__desc,
+  .reservation__label,
+  .reservation__hint,
+  .reservation__error,
+  .reservation__submit-note,
+  .reservation__card-sub,
+  .find-us__block-label,
+  .find-us__block-hint,
+  .find-us__block-link,
+  .find-us__live-text,
+  .footer__nav-link,
+  .footer__copyright,
+  .footer__legal-link,
+  .instagram__footer-note,
+  .highlight-card__link,
+  .about__stat-label,
+  .highlight-card__desc,
+  .highlight-card__price,
+  .menu__hours,
+  .menu__tab {
+    font-size: 0.875rem;
+  }
+
+  /* ── Hero ── */
+  .hero__inner {
+    justify-content: center;
+    text-align: center;
+    padding-top: calc(60px + 1.5rem);
+    padding-right: 1.25rem;
+    padding-bottom: 7.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__eyebrow {
+    font-size: 0.65rem;
+  }
+
+  .hero__subtitle {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__cta {
+    width: 85%;
+    min-height: 52px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 0.875rem;
+  }
+
+  .hero__scroll {
+    bottom: 1.25rem;
+    gap: 0.35rem;
+    padding: 0.25rem;
+  }
+
+  .hero__scroll-text {
+    display: none;
+  }
+
+  .hero__scroll-line {
+    height: 28px;
+  }
+
+  .hero__scroll-chevron {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ── Marquee ── */
+  .marquee__track {
+    animation-duration: 18s;
+  }
+
+  .marquee__text {
+    font-size: 0.75rem;
+  }
+
+  /* ── Food highlights carousel (transform-based, page scroll friendly) ── */
+  .highlights__grid--carousel {
+    overflow: hidden;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .highlights__track {
+    display: flex;
+    gap: 1rem;
+    will-change: transform;
+    transition: transform 0.4s var(--ease-smooth);
+  }
+
+  .highlights__track--dragging {
+    transition: none;
+  }
+
+  .highlights__dot {
+    cursor: pointer;
+  }
+
+  .highlight-card {
+    flex: 0 0 85vw;
+    min-width: 85vw;
+    height: 320px;
+    scroll-snap-align: none;
+  }
+
+  .highlight-card--visible:hover {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  .highlight-card--tapped {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  .highlight-card--visible.highlight-card--tapped {
+    transform: translateY(-8px);
+  }
+
+  .highlights__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .highlights__dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(250, 243, 232, 0.25);
+    transition:
+      width 200ms var(--ease-smooth),
+      height 200ms var(--ease-smooth),
+      background 200ms var(--ease-smooth);
+  }
+
+  .highlights__dot--active {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-red);
+  }
+
+  /* ── Menu ── */
+  .menu__tabs-wrap {
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+  }
+
+  .menu__tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+    min-height: 44px;
+  }
+
+  .menu__search {
+    min-height: 48px;
+  }
+
+  .menu-section-header {
+    font-size: 0.88rem;
+    margin-top: 1rem;
+  }
+
+  .menu-item {
+    padding: 0.85rem 0;
+  }
+
+  #menu-panel-pizza .menu-item__desc,
+  .menu--teaser .menu-item[data-tab="pizza"] .menu-item__desc {
+    display: none;
+  }
+
+  .menu-item__name {
+    font-size: 0.88rem;
+  }
+
+  .menu-item__price {
+    font-size: 0.85rem;
+  }
+
+  /* ── About ── */
+  .about__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .about__badge {
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .about__stats {
+    gap: 0.5rem;
+  }
+
+  .about__stat {
+    font-size: 0.8rem;
+  }
+
+  .about__stat-value {
+    font-size: 0.9rem;
+  }
+
+  .about__instagram {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  /* ── Instagram ── */
+  .instagram__grid {
+    gap: 3px;
+  }
+
+  .instagram__cell:not(.instagram__cell--all):hover img {
+    transform: none;
+  }
+
+  .instagram__cell:not(.instagram__cell--all):hover .instagram__cell-hover {
+    background: rgba(15, 10, 8, 0);
+  }
+
+  .instagram__cell:not(.instagram__cell--all):hover .instagram__cell-hover svg {
+    opacity: 0;
+  }
+
+  .instagram__cell--tapped img {
+    transform: scale(1.05);
+  }
+
+  .instagram__cell--tapped .instagram__cell-hover {
+    background: rgba(15, 10, 8, 0.7);
+  }
+
+  .instagram__cell--tapped .instagram__cell-hover svg {
+    opacity: 1;
+  }
+
+  /* ── Reservation ── */
+  .reservation__form-card {
+    padding: 1.25rem;
+  }
+
+  .reservation__input,
+  .reservation__select,
+  .reservation__textarea {
+    min-height: 48px;
+  }
+
+  .reservation__input--date {
+    min-height: 48px;
+    height: 48px;
+    line-height: 48px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .reservation__submit {
+    min-height: 54px;
+    height: 54px;
+  }
+
+  /* ── Find Us ── */
+  .find-us__map-wrap iframe {
+    height: 260px;
+  }
+
+  .find-us__map-actions {
+    flex-direction: row;
+  }
+
+  .find-us__btn {
+    flex: 1;
+    min-height: 48px;
+    font-size: 0.75rem;
+    padding: 0.65rem 0.5rem;
+  }
+
+  .find-us__block {
+    padding: 1rem 0;
+  }
+
+  .find-us__block-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  /* ── Footer ── */
+  .footer__brand {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .footer__logo {
+    font-size: 2.2rem;
+  }
+
+  .footer__tagline {
+    font-size: 0.82rem;
+  }
+
+  .footer__social {
+    gap: 0.75rem;
+  }
+
+  .footer__social-link {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .footer__nav {
+    padding: 1.5rem 1.25rem;
+    gap: 0.5rem 1rem;
+    justify-content: center;
+  }
+
+  .footer__nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.25rem 0;
+  }
+
+  .footer__nav-dot {
+    display: none;
+  }
+
+  .footer__nav-break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .footer__bar {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .footer__watermark {
+    font-size: 40vw;
+  }
+
+  .back-to-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  /* ── Disable sticky hover on touch ── */
+}
+
+@media (hover: none) and (max-width: 768px) {
+  .hero__cta--primary:hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--accent-red);
+  }
+
+  .hero__cta--secondary:hover {
+    transform: none;
+    background: transparent;
+    border-color: rgba(250, 243, 232, 0.4);
+  }
+
+  .highlight-card--visible:hover {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  .menu__tab:hover {
+    border-color: var(--border-subtle);
+    color: var(--cream-muted);
+  }
+
+  .menu__tab--active:hover {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    color: var(--cream);
+  }
+
+  .menu-item:hover {
+    padding-left: 0;
+    background: transparent;
+  }
+
+  .about__media:hover .about__image {
+    transform: none;
+  }
+
+  .about__instagram:hover {
+    background: transparent;
+    border-color: rgba(250, 243, 232, 0.2);
+  }
+
+  .instagram__follow:hover {
+    transform: none;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  .reservation__submit:hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--accent-red);
+  }
+
+  .find-us__btn--directions:hover {
+    transform: none;
+    background: var(--accent-red);
+  }
+
+  .find-us__btn--whatsapp:hover {
+    transform: none;
+    background: transparent;
+    border-color: rgba(250, 243, 232, 0.2);
+  }
+
+  .footer__social-link:hover {
+    transform: none;
+  }
+
+  .footer__nav-link:hover {
+    color: var(--cream-muted);
+  }
+
+  .footer__nav-link--instagram:hover {
+    color: var(--cream-muted);
+  }
+
+  .footer__legal-link:hover {
+    color: rgba(250, 243, 232, 0.25);
+  }
+
+  .back-to-top:hover,
+  .back-to-top--visible:hover {
+    transform: translateY(0);
+    box-shadow: 0 4px 16px rgba(232, 67, 26, 0.35);
+  }
+
+  .menu__whatsapp-btn:hover,
+  .menu__btn--primary:hover {
+    background: var(--accent-red);
+  }
+
+  .menu__btn--ghost:hover {
+    border-color: var(--border-subtle);
+    color: var(--cream-muted);
+  }
+
+  .marquee:hover .marquee__track {
+    animation-play-state: running;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero__title {
+    font-size: 3.2rem;
+  }
+
+  .instagram__follow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+}
+
+@media (min-width: 769px) {
+  .highlights__dots {
+    display: none;
+  }
+
+  .footer__nav-break {
+    display: none;
+  }
+}
