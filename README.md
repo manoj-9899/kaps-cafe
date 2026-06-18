@@ -58,7 +58,7 @@ The hours appear in: index.html hero eyebrow, about section badge, find us secti
 
 ## How to Change the WhatsApp Number
 
-Search for "918983229224" across all files.
+Search for "918805348821" across all files.
 Replace every instance with the new number.
 The number must include the country code 91 without the plus sign.
 

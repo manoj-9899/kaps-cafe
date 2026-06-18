@@ -2,7 +2,7 @@
   'use strict';
 
   var WHATSAPP_COMBO =
-    'https://wa.me/918983229224?text=Hi%20Kaps%20Caf%C3%A9!%20I%20want%20to%20know%20about%20combo%20meals.';
+    'https://wa.me/918805348821?text=Hi%20Kaps%20Caf%C3%A9!%20I%20want%20to%20know%20about%20combo%20meals.';
 
   var MENU_TABS = [
     {
